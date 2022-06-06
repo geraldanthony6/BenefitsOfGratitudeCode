@@ -19,11 +19,20 @@ public class NpcMove : MonoBehaviour
     //Speed npc moves
     public float speed = 3f;
 
+    //animator of NPC
+    private Animator animator;
+    //name of the animation that plays on the way to startPoint
+    public string startAnimation;
+    //mane of the animation that plays on the way to startPoint
+    public string endAnimation;
+
     // Start is called before the first frame update
     void Start()
     {
         //Set next pos
         nextPos = startPos.position;
+        //Set animator
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -41,12 +50,14 @@ public class NpcMove : MonoBehaviour
         {
             //Set nextPos to end Point
             nextPos = endPoint.position;
-           //check if npc position is equal to start point
+            animator.Play(endAnimation);
+            //check if npc position is equal to start point
         } else if(transform.position == endPoint.position)
         {
             //Set nextPos to start Point
             nextPos = startPoint.position;
-           
+            animator.Play(startAnimation);
+
         }
 
         //Move the npc from its current position to its next position based on where it is located now

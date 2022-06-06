@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Park Scene.unity
     guid: 34b8b1cffeb52774fac655ec3f70849e
   - enabled: 1
-    path: Assets/Scenes/Credits Scene.unity
-    guid: 6ba2086da407f234b8c6129a8829d234
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 48b20ea3cdff2964c973a5132ed8013f
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: 3ae167058be4000439f1d54a932c4fb1
   m_configObjects: {}

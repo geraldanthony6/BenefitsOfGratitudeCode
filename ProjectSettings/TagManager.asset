@@ -9,6 +9,9 @@ TagManager:
   - Lever
   - Interactable
   - EventSpace
+  - SchoolTransition
+  - ParkTransition
+  - EndGameTransition
   layers:
   - Default
   - TransparentFX

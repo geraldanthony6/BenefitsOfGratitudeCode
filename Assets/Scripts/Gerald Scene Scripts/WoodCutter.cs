@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Author: Gerald Anthony, Jr.
 public class WoodCutter : MonoBehaviour
 {
     //Player Variable
     [SerializeField] private GameObject player;
-
     //Gameobject variable for obstacles
     [SerializeField] private GameObject[] debris;
     //Float for distance between cutters and player
@@ -17,7 +15,7 @@ public class WoodCutter : MonoBehaviour
 
     //Bool for cutter pick up.
     private bool cuttersPickedUp = false;
-
+    
 
     // Update is called once per frame
     void Update()
@@ -28,13 +26,12 @@ public class WoodCutter : MonoBehaviour
         distanceFromCutters = Vector2.Distance(transform.position, player.transform.position);
 
         //Checks distance between player and woodcutters
-        if(distanceFromCutters < 0.9f)
+        if(distanceFromCutters < 0.5f)
         {
             //Allows player to pick up wood cutters after "E" is pressed
             if(Input.GetKeyDown(KeyCode.E) && cuttersPickedUp == false)
             {
                 cuttersPickedUp = true;
-                
                 Debug.Log("Picked Up");
             }
         }

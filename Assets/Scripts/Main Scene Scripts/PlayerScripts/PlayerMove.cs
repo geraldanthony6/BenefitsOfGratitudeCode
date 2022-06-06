@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //The script which moves the player character on user input
 //Authors: Charlie Christakos
@@ -83,4 +84,16 @@ public class PlayerMove : MonoBehaviour {
         animator.ResetTrigger("StandingLeft");
         animator.ResetTrigger("StandingRight");
     }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.tag == "SchoolTransition"){
+            SceneManager.LoadScene("School Scene");
+        }
+        if(other.tag == "ParkTransition"){
+            SceneManager.LoadScene("Park Scene");
+        }
+        if(other.tag == "EndGameTransition"){
+            SceneManager.LoadScene("Main Menu");
+        }
+    }   
 }

@@ -47,6 +47,7 @@ public class NPC : Interactable
                 //if clicks on talk box window
                 case "Dialogue Window":
                     TalkBox currTalkBox = (TalkBox)currDialoBox;
+                    Debug.Log("currTalkBox.triggersEvent " + currTalkBox.triggersEvent);
                     if (currTalkBox.triggersEvent == true)
                     {
                         currNPC.GetComponent<NPC>().eventTrigger();

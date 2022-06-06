@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class GrandmaNPC : NPC
 {//the name of the npc
-    string testName = "Test NPC";
+    string testName = "Granny Ruth";
 
     //the game objects that will change when event is triggered
     public GameObject obstacle1;
 
 
     //initializers for NPC dialogue windows
-    TalkBox dialo1 = new TalkBox("Hey, What's Up?", null, false);
-    ChoiceBox dialo2 = new ChoiceBox("Pick Choice 3 to clear the obstacles.", new ChoiceBox.Choice("Choice 1", null, false),
-        new ChoiceBox.Choice("Choice 2", null, false),
-        new ChoiceBox.Choice("Choice 3", null, true));
+    TalkBox dialo1 = new TalkBox("How was your day sonny?", null, false);
+    ChoiceBox dialo2 = new ChoiceBox("How was your day?", new ChoiceBox.Choice("Terrible!", null, false),
+        new ChoiceBox.Choice("Why do you care?", null, false),
+        new ChoiceBox.Choice("Amazing!", null, true));
     DialoBox dialoEnd = new DialoBox();
 
     // Start is called before the first frame update

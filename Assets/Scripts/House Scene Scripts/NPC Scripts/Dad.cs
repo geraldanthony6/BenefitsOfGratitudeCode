@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Dad : NPC
 {
     //the name of the npc
-    string testName = "Test NPC";
+    string testName = "Dad";
 
     //the game objects that will change when event is triggered
     public GameObject obstacle1;
@@ -16,10 +16,10 @@ public class Dad : NPC
     public GameObject obstacle3;
 
     //initializers for NPC dialogue windows
-    TalkBox dialo1 = new TalkBox("Hey, What's Up?", null, false);
-    ChoiceBox dialo2 = new ChoiceBox("Pick Choice 3 to clear the obstacles.", new ChoiceBox.Choice("Choice 1", null, false),
-        new ChoiceBox.Choice("Choice 2", null, false),
-        new ChoiceBox.Choice("Choice 3", null, true));
+    TalkBox dialo1 = new TalkBox("I made you a ham sandwhich for lunch son!", null, false);
+    ChoiceBox dialo2 = new ChoiceBox("How do you respond to your dad?", new ChoiceBox.Choice("I hate ham!", null, false),
+        new ChoiceBox.Choice("Ewwww.", null, false),
+        new ChoiceBox.Choice("I love ham!", null, true));
     DialoBox dialoEnd = new DialoBox();
 
     // Start is called before the first frame update

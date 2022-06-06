@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//The player characters father as an NPC
+//The player character's teacher before school starts (NPC)
 //Author: Charlie Christakos
 public class Teacher : NPC
 {
     //the name of the npc
-    string testName = "Test NPC";
+    string testName = "Teacher";
 
     //the game objects that will change when event is triggered
     public GameObject obstacle1;
@@ -16,10 +16,10 @@ public class Teacher : NPC
     public GameObject obstacle3;
 
     //initializers for NPC dialogue windows
-    TalkBox dialo1 = new TalkBox("Hey, What's Up?", null, false);
-    ChoiceBox dialo2 = new ChoiceBox("Pick Choice 3 to clear the obstacles.", new ChoiceBox.Choice("Choice 1", null, false),
-        new ChoiceBox.Choice("Choice 2", null, false),
-        new ChoiceBox.Choice("Choice 3", null, true));
+    TalkBox dialo1 = new TalkBox("Ready for class?", null, false);
+    ChoiceBox dialo2 = new ChoiceBox("How do you respond?", new ChoiceBox.Choice("Yes, I'm excited!", null, true),
+        new ChoiceBox.Choice("No.", null, false),
+        new ChoiceBox.Choice("I hate school.", null, false));
     DialoBox dialoEnd = new DialoBox();
 
     // Start is called before the first frame update
